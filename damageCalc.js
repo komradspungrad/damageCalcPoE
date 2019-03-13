@@ -1,5 +1,5 @@
-function main() {
-    var threshold = 80.0;
+function main(thresh) {
+    var threshold = thresh;
     var mods = document.getElementsByClassName('mods');
     var dmg = 0.0;
 
@@ -49,6 +49,8 @@ function main() {
                 html = '<div style="background-color:orange;color:black">Adds <b>' + dmg + '</b> Total Damage</div>';
             } else if (dmg >= threshold) {
                 html = '<div style="background-color:mediumseagreen;color:black">Adds <b>' + dmg + '</b> Total Damage</div>';
+            } else if (dmg >= threshold - 10) {
+                html = '<div style="background-color:deepskyblue;color:black">Adds <b>' + dmg + '</b> Total Damage</div>';
             } else {
                 html = 'Adds <b>' + dmg + '</b> Total Damage';
             }
